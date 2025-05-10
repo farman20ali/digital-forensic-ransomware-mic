@@ -102,37 +102,37 @@ IntegrityLevelDemo/
 
    ```bash
    # Run as Administrator:
-   python mic_control.py apply test_files
+   python defence_monitor_mic_high.py apply test_files
    ```
 
    * This applies **High** MIC to the folder and its children.
    * To revert back to Medium (default):
 
      ```bash
-     python mic_control.py revert C:\ProtectedFiles
+     python defence_monitor_mic_high.py revert test_files
      ```
 
 ---
 
 ## 🔒 Run the Simulation
 
-1. **Ensure** `C:\ProtectedFiles` is at **High** integrity.
+1. **Ensure** `test_files` is at **High** integrity.
 
-2. **Launch the trojan under Low integrity** to mimic untrusted code:
+2. **Launch the trojan using command or double click** to mimic untrusted code:
 
    ```powershell
-   Start-Process python -ArgumentList 'trojan.py --path C:\ProtectedFiles' -Verb runas -IntegrityLevel Low
+     'trojan.py --path 'test_files'
    ```
 
 3. **Observe:**
 
-   * The trojan script attempts to encrypt files in `C:\ProtectedFiles`.
-   * MIC blocks Low-integrity processes, so write/rename operations fail, preserving your files.
+   * The trojan script attempts to encrypt files in `test_files`.
+   * MIC blocks Medium-integrity processes, so write/rename operations fail, preserving your files.
 
 4. **Revert folder integrity** (if needed):
 
    ```bash
-   python mic_control.py revert C:\ProtectedFiles
+   python defence_monitor_mic_high.py revert test_files
    ```
 
 ---
@@ -140,7 +140,7 @@ IntegrityLevelDemo/
 ## 📺 Video Demo Highlights
 
 * 🔧 Setting and reverting integrity levels with `defence_monitor_mic_high.py`
-* 💣 Running the ransomware at Low integrity
+* 💣 Running the ransomware at Medium integrity
 * 🚫 Blocked write attempts and protected files
 * 🔍 Reviewing Windows security event logs for denied access
 
