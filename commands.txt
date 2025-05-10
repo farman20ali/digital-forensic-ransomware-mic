@@ -1,0 +1,34 @@
+python -m venv venv
+venv\Scripts\activate        # Windows
+# or
+source venv/bin/activate     # macOS/Linux
+
+above step is optional
+
+pip install -r requirements.txt
+
+
+
+
+python setup_dummy_files.py --target test_files --count 50
+
+
+optional:
+
+pip install pyinstaller
+pyinstaller --onefile --windowed trojan.py
+
+Output: dist\trojan.exe (rename to Invoice.pdf.exe to mimic disguise).
+
+execute trojan
+python trojan.py --path test_files
+
+
+if bundled:
+dist\Invoice.pdf.exe --path test_files
+
+
+
+now run script :
+
+python defence_monitor_mic_working.py apply test_files
