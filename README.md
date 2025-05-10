@@ -2,7 +2,7 @@
 
 🛡️ This repository shows how to simulate a simple Python-based “ransomware” attack and how Windows Mandatory Integrity Control (MIC) can block untrusted processes from modifying protected files when the folder’s integrity level is set to High (or Medium). All steps are performed inside a Windows 10 VM for safe, repeatable testing.
 
-🎥 Watch the full video walkthrough here: [Windows Integrity Level Ransomware Demo](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+🎥 Watch the full video walkthrough here: [Windows Integrity Level Ransomware Demo](https://youtu.be/0lC7ey88R58)
 
 ---
 
@@ -144,7 +144,7 @@ IntegrityLevelDemo/
 * 🚫 Blocked write attempts and protected files
 * 🔍 Reviewing Windows security event logs for denied access
 
-Watch it here: [https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+Watch it here: [https://youtu.be/0lC7ey88R58](https://youtu.be/0lC7ey88R58)
 
 > ⚠️ **Disclaimer:**
 > This project is strictly for controlled, educational environments. Never run ransomware simulations on production systems or without explicit authorization.
